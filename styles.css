@@ -1,0 +1,162 @@
+body {
+    box-sizing: border-box;
+    background-color: gray;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 18px;
+}
+
+.card-showcase {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-image: url("poker-card.png");
+    background-size: contain;
+    max-height: 390px;
+    max-width: 290px;
+    min-height: 390px;
+    min-width: 290px;
+    display: flex;
+}
+
+.card__border {
+    border: 2px solid red;
+    flex-grow: 1;
+    margin: 12px 14px 14px 14px;
+    border-radius: 12px;
+    display: flex;
+}
+
+.card__safe-zone {
+    border: 1px dashed blue;
+    display: flex;
+    flex-grow: 1;
+    margin: 10px 12px 10px 10px;
+    border-radius: 12px;
+}
+
+.card__content {
+    background-color: #6EBF45;
+    flex-grow: 1;
+    border-radius: 12px;
+    flex-direction: column;
+    display: flex;
+}
+
+.card__content__top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card__balloon {
+    position: absolute;
+    z-index: 1;
+    height: 67px;
+    width: 60px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    background: white;
+    border-bottom-right-radius: 50px;
+}
+
+.card__balloon_type-logo {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #B2BB65;
+    border-radius: 20px;
+    position: relative;
+    top: 4px;
+    left: 6px;
+}
+
+
+.card__content__bottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background: #DCE0B9;
+}
+
+
+.card__artwork {
+    display: flex;
+    border-bottom: 1px solid black;
+    background: #B2BB65;
+}
+
+.card__artwork img {
+    object-fit: contain;
+    /* align-self: center; */
+    /* flex: 0 0 auto */
+    height: 180px;
+    width: 100%;
+
+}
+
+.card__details {
+    height: 60px;
+    flex-direction: row;
+    display: flex;
+    border-bottom: 1px solid black;
+    font-size: 10px;
+    justify-content: space-between;
+}
+
+.card__details__flavor-text {
+    padding: 2px;
+    justify-self: flex-start;
+    border-right: 1px solid black;
+    flex: 1;
+}
+
+.card__details__effect {
+    justify-self: flex-end;
+    flex: 1;
+    padding: 2px;
+}
+
+.card__stats {
+    display: flex;
+}
+
+.card__stats__left {
+    width: 40%;
+    height: 34px;
+    border-right: 1px solid black;
+}
+
+.card__stats__center {
+    width: 20%;
+    height: 34px;
+
+}
+
+.card__stats__right {
+    width: 40%;
+    height: 34px;
+
+    border-left: 1px solid black;
+
+}
+
+.card__number {}
+
+.card__rarity {}
