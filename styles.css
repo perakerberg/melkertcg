@@ -6,8 +6,14 @@ body {
 }
 
 h1 {
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 24px;
+}
+
+h2 {
+    font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 18px;
+    margin-left: 58px;
 }
 
 .card-showcase {
@@ -17,8 +23,8 @@ h1 {
 }
 
 .card {
-    background-image: url("poker-card.png");
-    background-size: contain;
+    /* background-image: url("poker-card.png");
+    background-size: contain; */
     max-height: 390px;
     max-width: 290px;
     min-height: 390px;
@@ -27,15 +33,21 @@ h1 {
 }
 
 .card__border {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    background: white;
     flex-grow: 1;
     margin: 12px 14px 14px 14px;
     border-radius: 12px;
     display: flex;
 }
 
+.nature .card__border {
+    background-color: #F6F2EB;
+
+}
+
 .card__safe-zone {
-    border: 1px dashed blue;
+    border: 2px solid black;
     display: flex;
     flex-grow: 1;
     margin: 10px 12px 10px 10px;
@@ -43,11 +55,15 @@ h1 {
 }
 
 .card__content {
-    background-color: #6EBF45;
+    background-color: white;
     flex-grow: 1;
     border-radius: 12px;
     flex-direction: column;
     display: flex;
+}
+
+.nature .card__content {
+    background-color: #C1DC60;
 }
 
 .card__content__top {
@@ -62,13 +78,27 @@ h1 {
 .card__balloon {
     position: absolute;
     z-index: 1;
-    height: 67px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    background: white;
-    border-bottom-right-radius: 50px;
+    background: #E0EEC6;
+    border-bottom-right-radius: 90px;
+    border-top-left-radius: 20px;
+    font-family: 'Allerta Stencil', sans-serif;
+
+    /* border-top-right-radius: 90px; */
+    /* border-radius: 100px; */
+    /* border: 2px solid black; */
+    /* left: -20px; */
 }
+
+.card__balloon span {
+    display: block;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+
 
 .card__balloon_type-logo {
     display: block;
@@ -90,15 +120,18 @@ h1 {
     border-bottom-left-radius: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
     margin-bottom: 10px;
-    background: #DCE0B9;
+    background: #E0EEC6;
 }
 
 
 .card__artwork {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+.pickle .card__artwork {
     background: #B2BB65;
 }
 
@@ -112,18 +145,21 @@ h1 {
 }
 
 .card__details {
+    /* font-family: 'Amaranth', sans-serif; */
+    font-family: 'Basic', sans-serif;
     height: 60px;
     flex-direction: row;
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     font-size: 10px;
     justify-content: space-between;
 }
 
 .card__details__flavor-text {
     padding: 2px;
+    padding-left: 4px;
     justify-self: flex-start;
-    border-right: 1px solid black;
+    border-right: 2px solid black;
     flex: 1;
 }
 
@@ -131,6 +167,8 @@ h1 {
     justify-self: flex-end;
     flex: 1;
     padding: 2px;
+    padding-left: 4px;
+
 }
 
 .card__stats {
@@ -140,20 +178,38 @@ h1 {
 .card__stats__left {
     width: 40%;
     height: 34px;
-    border-right: 1px solid black;
+    border-right: 2px solid black;
 }
 
 .card__stats__center {
     width: 20%;
     height: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 
+
+}
+
+.card__stats__center span {
+    display: block;
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    background: #FEC717;
 }
 
 .card__stats__right {
     width: 40%;
     height: 34px;
 
-    border-left: 1px solid black;
+    border-left: 2px solid black;
 
 }
 

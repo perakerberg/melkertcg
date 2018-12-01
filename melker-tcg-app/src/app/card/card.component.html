@@ -1,0 +1,41 @@
+<div class="card" [ngClass]="character.classes">
+  <div class="card__border">
+    <div class="card__safe-zone">
+      <div class="card__content">
+        <div class="card__balloon">
+          <div class="card__balloon_type-logo"></div>
+          <span>{{character.Type}}</span>
+        </div>
+        <div class="card__content__top">
+          <h1 *ngIf="character && character.name.length<=10">{{character.name}}</h1>
+          <h2 *ngIf="character && character.name.length>10">{{character.name}}</h2>
+        </div>
+        <div class="card__content__bottom">
+          <div class="card__artwork">
+            <img [src]="character.imageUrl" />
+          </div>
+          <div class="card__details">
+            <div class="card__details__flavor-text">
+              {{character.flavorText}}
+            </div>
+            <div class="card__details__effect">
+              {{character.effects}}
+
+            </div>
+          </div>
+          <div class="card__stats">
+            <div class="card__stats__left">
+
+            </div>
+            <div class="card__stats__center">
+              <span>{{character.price}}</span>
+            </div>
+            <div class="card__stats__right">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
