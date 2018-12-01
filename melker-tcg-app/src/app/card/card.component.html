@@ -4,11 +4,13 @@
       <div class="card__content">
         <div class="card__balloon">
           <div class="card__balloon_type-logo"></div>
-          <span>{{character.Type}}</span>
+          <span>{{character.type}}</span>
         </div>
         <div class="card__content__top">
-          <h1 *ngIf="character && character.name.length<=10">{{character.name}}</h1>
-          <h2 *ngIf="character && character.name.length>10">{{character.name}}</h2>
+          <div class="character-name">
+            <h1 *ngIf="character && character.name.length<=10">{{character.name}}</h1>
+            <h2 *ngIf="character && character.name.length>10">{{character.name}}</h2>
+          </div>
         </div>
         <div class="card__content__bottom">
           <div class="card__artwork">

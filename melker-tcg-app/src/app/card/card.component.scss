@@ -1,9 +1,4 @@
-body {
-  box-sizing: border-box;
-  background-color: gray;
-  font-size: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+$background-color--nature : #C1DC60;
 
 h1 {
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -13,14 +8,8 @@ h1 {
 h2 {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 18px;
-  margin-left: 58px;
 }
 
-.card-showcase {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
 
 .card {
   /* background-image: url("poker-card.png");
@@ -30,18 +19,15 @@ h2 {
   min-height: 390px;
   min-width: 290px;
   display: flex;
+
 }
 
 .card__border {
-  /* border: 2px solid red; */
-  background: white;
   flex-grow: 1;
   margin: 12px 14px 14px 14px;
   border-radius: 12px;
   display: flex;
-}
-
-.nature .card__border {
+  box-shadow: 10px 10px;
   background-color: #F6F2EB;
 
 }
@@ -55,25 +41,46 @@ h2 {
 }
 
 .card__content {
-  background-color: white;
   flex-grow: 1;
   border-radius: 12px;
   flex-direction: column;
   display: flex;
+
+  .nature & {
+    background-color: $background-color--nature;
+
+  }
+
+  .card__content__top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .character-name {
+      margin-left: 74px;
+      margin-right: 10px;
+      justify-content: center;
+    }
+  }
+
+  .card__content__bottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    background: #E0EEC6;
+  }
 }
 
-.nature .card__content {
-  background-color: #C1DC60;
-}
 
-.card__content__top {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+
 
 .card__balloon {
   position: absolute;
@@ -91,57 +98,46 @@ h2 {
   /* border-radius: 100px; */
   /* border: 2px solid black; */
   /* left: -20px; */
+  span {
+    display: block;
+    margin-left: 6px;
+    margin-top: 5px;
+  }
+
+  span::first-letter {
+    text-transform: uppercase;
+  }
+
+  .card__balloon_type-logo {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #B2BB65;
+    border-radius: 20px;
+    position: relative;
+    top: 4px;
+    left: 6px;
+  }
 }
 
-.card__balloon span {
-  display: block;
-  margin-left: 6px;
-  margin-top: 5px;
-}
-
-
-.card__balloon_type-logo {
-  display: block;
-  height: 40px;
-  width: 40px;
-  background: #B2BB65;
-  border-radius: 20px;
-  position: relative;
-  top: 4px;
-  left: 6px;
-}
-
-
-.card__content__bottom {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 2px solid black;
-  margin-bottom: 10px;
-  background: #E0EEC6;
-}
 
 
 .card__artwork {
   display: flex;
   border-bottom: 2px solid black;
-}
 
-.pickle .card__artwork {
-  background: #B2BB65;
-}
+  .pickle & {
+    background: #B2BB65;
 
-.card__artwork img {
-  object-fit: contain;
-  /* align-self: center; */
-  /* flex: 0 0 auto */
-  height: 180px;
-  width: 100%;
+  }
 
+  img {
+    object-fit: contain;
+    /* align-self: center; */
+    /* flex: 0 0 auto */
+    height: 180px;
+    width: 100%;
+  }
 }
 
 .card__details {
@@ -151,67 +147,73 @@ h2 {
   flex-direction: row;
   display: flex;
   border-bottom: 2px solid black;
-  font-size: 10px;
+  font-size: 9px;
   justify-content: space-between;
+
+  .card__details__flavor-text {
+    padding: 2px;
+    padding-left: 4px;
+    justify-self: flex-start;
+    border-right: 2px solid black;
+    flex: 1;
+  }
+
+  .card__details__effect {
+    justify-self: flex-end;
+    flex: 1;
+    padding: 2px;
+    padding-left: 4px;
+
+  }
 }
 
-.card__details__flavor-text {
-  padding: 2px;
-  padding-left: 4px;
-  justify-self: flex-start;
-  border-right: 2px solid black;
-  flex: 1;
-}
 
-.card__details__effect {
-  justify-self: flex-end;
-  flex: 1;
-  padding: 2px;
-  padding-left: 4px;
 
-}
+
 
 .card__stats {
   display: flex;
+
+  .card__stats__left {
+    width: 40%;
+    height: 34px;
+    border-right: 2px solid black;
+  }
+
+  .card__stats__center {
+    width: 20%;
+    height: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+
+    span {
+      display: block;
+      border: 2px solid black;
+      border-radius: 100px;
+      width: 28px;
+      height: 28px;
+      text-align: center;
+      background: #FEC717;
+    }
+  }
+
+  .card__stats__right {
+    width: 40%;
+    height: 34px;
+
+    border-left: 2px solid black;
+
+  }
+
 }
 
-.card__stats__left {
-  width: 40%;
-  height: 34px;
-  border-right: 2px solid black;
-}
-
-.card__stats__center {
-  width: 20%;
-  height: 34px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
 
 
-}
-
-.card__stats__center span {
-  display: block;
-  border: 2px solid black;
-  border-radius: 100px;
-  width: 28px;
-  height: 28px;
-  text-align: center;
-  background: #FEC717;
-}
-
-.card__stats__right {
-  width: 40%;
-  height: 34px;
-
-  border-left: 2px solid black;
-
-}
 
 .card__number {}
 
