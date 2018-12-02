@@ -19,7 +19,19 @@ h2 {
   min-height: 390px;
   min-width: 290px;
   display: flex;
+  left: 0;
+  top: 0;
+  position: relative;
 
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s ease-out;
+
+  &.zoom {
+    transform: scale(2.0) translateY(80px) translateX(80px) rotateZ(360deg);
+    z-index: 100;
+    transition: all 0.5s ease-in;
+  }
 }
 
 .card__border {
