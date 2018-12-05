@@ -27,16 +27,23 @@
           </div>
           <div class="card__stats">
             <div class="card__stats__left">
+              <h1>{{character.attack}}</h1>
+              <img src="../../assets/attack-symbol.png" />
 
             </div>
             <div class="card__stats__center">
               <span>{{character.price}}</span>
             </div>
             <div class="card__stats__right">
-
+              <h1>{{character.health}}</h1>
+              <img src="../../assets/health-symbol.png" />
             </div>
           </div>
 
+        </div>
+        <div class="border__facts">
+          <span class="border__facts__rarity">{{character.rarity}}</span>
+          <span class="border__facts__number">#{{character.number}}</span>
         </div>
       </div>
     </div>

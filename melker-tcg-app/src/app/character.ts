@@ -5,7 +5,11 @@ export class Character {
         public effects: string,
         public type: string,
         public archetype: string,
-        public imageUrl: string) {
+        public imageUrl: string,
+        public attack: number,
+        public health: number,
+        public rarity: string,
+        public number: string) {
         this.classes = [this.archetype, this.type.toString()];
 
     }

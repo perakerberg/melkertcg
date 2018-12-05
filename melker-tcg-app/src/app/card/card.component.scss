@@ -86,7 +86,7 @@ h2 {
     margin-left: 10px;
     margin-right: 10px;
     border: 2px solid black;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     background: #E0EEC6;
   }
 }
@@ -103,7 +103,7 @@ h2 {
   border-bottom: 2px solid black;
   background: #E0EEC6;
   border-bottom-right-radius: 90px;
-  border-top-left-radius: 20px;
+  border-top-left-radius: 16px;
   font-family: 'Allerta Stencil', sans-serif;
 
   /* border-top-right-radius: 90px; */
@@ -124,11 +124,14 @@ h2 {
     display: block;
     height: 40px;
     width: 40px;
-    background: #B2BB65;
-    border-radius: 20px;
     position: relative;
     top: 4px;
     left: 6px;
+    background-image: url('../../assets/nature-symbol.png');
+    background-repeat: no-repeat;
+    display: block;
+    background-size: contain;
+    background-position-x: 8px;
   }
 }
 
@@ -190,6 +193,21 @@ h2 {
     width: 40%;
     height: 34px;
     border-right: 2px solid black;
+    display: flex;
+
+    img {
+      height: 26px;
+      width: auto;
+      margin-left: auto;
+      margin-top: 4px;
+      margin-right: 5px;
+      transform: rotateZ(4deg);
+    }
+
+    h1 {
+      margin-left: 10px;
+      margin-top: 3px;
+    }
   }
 
   .card__stats__center {
@@ -217,16 +235,39 @@ h2 {
   .card__stats__right {
     width: 40%;
     height: 34px;
-
     border-left: 2px solid black;
+    display: flex;
+
+    img {
+      height: 26px;
+      width: auto;
+      margin-left: auto;
+      margin-top: 4px;
+      margin-right: 5px;
+      transform: rotateZ(4deg);
+    }
+
+    h1 {
+      margin-left: 10px;
+      margin-top: 3px;
+    }
 
   }
 
+
 }
 
+.border__facts {
+  display: flex;
+  margin-left: 33px;
+  margin-right: 33px;
 
+  .border__facts__rarity {
+    font-weight: 800;
+  }
 
-
-.card__number {}
-
-.card__rarity {}
+  .border__facts__number {
+    margin-left: auto;
+    font-weight: 300;
+  }
+}
